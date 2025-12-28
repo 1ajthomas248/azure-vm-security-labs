@@ -54,6 +54,9 @@ This layered model ensures that traffic must be explicitly allowed at both the A
 
 - Attached an NSG to the VM’s network interface
 
+<img width="512" height="366" alt="image" src="https://github.com/user-attachments/assets/0f5af3bd-d055-4198-bec1-cfbde4c88ff3" />
+<img width="512" height="240" alt="image" src="https://github.com/user-attachments/assets/b779c1a1-23d1-434a-a292-ed483bd2823a" />
+
 ### Phase 2: Network Security Group (NSG) Configuration
 
 Configured inbound NSG rules to enforce least-privilege access:
@@ -68,13 +71,15 @@ Denied Traffic
 
 - All other inbound traffic is implicitly denied by Azure’s default NSG rule. No additional deny rules were created, as the default DenyAllInbound rule already enforces this behavior.
 
+<img width="512" height="328" alt="image" src="https://github.com/user-attachments/assets/fbc378ed-d7b4-49bc-9b78-ab65187cd0da" />
+
 ### Phase 3: Secure Access via SSH
 
 - Connected to the VM using SSH key authentication
 
-- Resolved Windows OpenSSH private key permission issues
-
 - Verified secure access to the VM shell
+
+<img width="512" height="378" alt="image" src="https://github.com/user-attachments/assets/96b25fab-b3dd-499c-b507-5ec729755573" />
 
 ### Phase 4: Web Server Installation
 
@@ -87,6 +92,9 @@ Installed and enabled Nginx:
 - Enabled and started the service
 
 - Verified the default Nginx page was accessible via the public IP
+
+<img width="512" height="253" alt="image" src="https://github.com/user-attachments/assets/5bd4f0f4-48ed-47ee-a91e-732eb12b5198" />
+<img width="512" height="164" alt="image" src="https://github.com/user-attachments/assets/71bc3636-cfeb-4b4a-b165-7a4781c643de" />
 
 ### Phase 5: Host-Based Firewall (UFW) Configuration
 
@@ -104,6 +112,8 @@ Configured UFW with secure defaults:
 
 Enabled UFW and verified active firewall rules.
 
+<img width="512" height="496" alt="image" src="https://github.com/user-attachments/assets/d5424938-f159-447c-9cf5-8c975df9e004" />
+
 ### Phase 6: Validation and Testing
 
 Confirmed the following behaviors:
@@ -116,6 +126,8 @@ Confirmed the following behaviors:
 
 - Firewall rules are enforced at both NSG and OS levels
 
+<img width="512" height="381" alt="image" src="https://github.com/user-attachments/assets/1fd2effc-c1f0-4c33-88ff-bd07fd801cf9" />
+<img width="512" height="228" alt="image" src="https://github.com/user-attachments/assets/e337c1a9-f4a8-402c-83b8-0bb0b70d2f4e" />
 
 ### Key Takeaways and Conclusion
 
