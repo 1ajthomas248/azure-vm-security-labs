@@ -50,6 +50,8 @@ Example:
 
 HTTP access was confirmed via browser and command-line testing.
 
+<img width="512" height="132" alt="image" src="https://github.com/user-attachments/assets/c4bafc1b-cc4a-462a-b812-bfcc716d1a8b" />
+
 ### Phase 2: Azure NSG Configuration for HTTPS
 
 HTTPS requires inbound access on TCP port 443.
@@ -63,6 +65,8 @@ HTTPS requires inbound access on TCP port 443.
 - Confirmed no higher-priority deny rules conflicted with HTTPS
 
 This established the cloud-level perimeter required for TLS traffic.
+
+<img width="394" height="512" alt="image" src="https://github.com/user-attachments/assets/e2006a46-5bbb-420e-95c9-a2a9903063bb" />
 
 ### Phase 3: Certbot Installation and Certificate Issuance
 
@@ -92,6 +96,8 @@ Certbot successfully:
 - Enabled HTTP → HTTPS redirection
 
 - Configured automatic renewal
+
+<img width="512" height="436" alt="image" src="https://github.com/user-attachments/assets/79bd9359-7225-44f1-a529-495af850a72e" />
 
 ### Phase 4: HTTPS Validation
 
@@ -138,6 +144,8 @@ A structured troubleshooting process was followed:
 sudo ufw allow 443/tcp
 sudo ufw reload
 ```
+
+<img width="512" height="324" alt="image" src="https://github.com/user-attachments/assets/0f176ca7-1a03-465d-8ab1-e0e7755d1090" />
 
 Once UFW was updated, HTTPS connectivity was immediately restored. This reinforced the importance of validating all security layers—cloud perimeter, host firewall, and application configuration—when diagnosing access issues.
 
